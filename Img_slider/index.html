@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images_Slider</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 500px;
+            height: 300px;
+    
+        }
+
+        button {
+            background-color: rgba(137, 43, 226, 0.628);
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            border-radius: 20px;
+            padding: 10px 20px;
+            color: rgba(255, 255, 255, 0.721);
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color: brown;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <button onclick="prev()">Previous</button>
+        <img src="picture/images0.jpg" alt="1">
+        <button onclick="next()">Next</button>
+        
+    </div>
+
+
+    <script>
+        let images = ["picture/images0.jpg", "picture/images1.jpg", "picture/images2.jpg", "picture/images3.jpg"];
+        
+        let imgTagCall = document.querySelector('img');
+        
+        let index = 0;
+        
+        
+        function next() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+                imgTagCall.src = images[index];
+            } else {
+                imgTagCall.src = images[index];
+            }
+        }
+        function prev() {
+            index--;
+            if (index < 0) {
+                index = images.length - 1;
+                imgTagCall.src = images[index];
+            } else {
+                imgTagCall.src = images[index];
+            }
+        }
+    </script>
+</body>
+
+</html>

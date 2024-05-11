@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempereture Converter</title>
+    <!-- cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- vootstrap  css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- vootstrap  cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+    <style>
+        #temp{
+            background-color: rgb(255, 208, 0);
+            width: 100%;
+            height: 250px;
+            padding: 50px;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           
+        }
+        .chng{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+.div1{
+    display: flex;
+    flex-direction: column;
+}
+
+.temp_con{
+    border-color: brown;
+    text-align: center;
+    font-size: 20px;
+}
+    </style>
+</head>
+
+<body>
+
+<div id="temp">
+    <h1>Tempereture Converter</h1>
+<div class="chng">
+    <div class="div1">
+        <label>Degree Celsius</label>
+        <input type="number" value="0" id="cel" class="temp_con">
+    </div>
+
+    <div class="div1">
+        <label>Fahrenheit</label>
+        <input type="number" value="32" id="far" class="temp_con">
+    </div>
+</div>
+
+</div>
+
+
+    
+
+<script>
+
+let cel_id = document.getElementById("cel");
+
+cel_id.addEventListener('input', function(){
+
+let cel_input = this.value; 
+let cel_f =(cel_input * 9/5) + 32;
+if(!Number.isInteger(cel_f)){
+cel_f=cel_f.toFixed(4);
+}
+far_id.value = cel_f;
+
+});
+
+
+
+
+let far_id = document.getElementById("far");
+
+far_id.addEventListener('input',function(){
+
+let far_input = this.value;
+let far_f = (far_input - 32) * 5/9;
+if(!Number.isInteger(far_f)){
+    far_f = far_f.toFixed(4);
+}
+cel_id.value = far_f;
+
+});
+
+
+</script>
+
+<!-- vootstrap javascript link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+
+</body>
+    
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

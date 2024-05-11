@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Registration From</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+  <div class="container">
+  <h1 id="headChng">Sing Up</h1>
+  <div id="line"></div>
+
+  <div class="form">
+  <div class="name">
+    <i class="fa-solid fa-user"></i>
+    <input type="text" placeholder="Name">
+  </div>
+  
+  <div class="email">
+    <i class="fa-solid fa-at"></i>
+    <input type="email" placeholder="Email">
+  </div>
+  
+  <div class="password">
+    <i class="fa-solid fa-key"></i>
+    <input type="password" placeholder="Password">
+  </div>
+    
+  </div>
+
+  <p><span id="wordchng">Password Suggestion
+  </span> <a href="#">Click Here</a></p>
+  <div class="button">
+    <button class="greenBtn" onclick="singUp()">Sign Up</button>
+    <button class="btn" onclick="signIn()">Sign In</button>
+  </div>
+  </div>
+
+<script>
+const heading = document.querySelector('#headChng');
+const line =document.querySelector('#line');
+const wordchng = document.querySelector('#wordchng');
+const nameDiv =document.querySelector('.name');
+const signInBtn =document.querySelector('.btn');
+const signUpBtn =document.querySelector('.greenBtn');
+
+const signIn = () =>{
+  wordchng.innerHTML='Lost Password';
+  heading.innerHTML="Sign In";
+  line.style.marginRight ='-70px';
+  nameDiv.classList.add('noName');
+  signInBtn.classList.add('greenBtn');
+  signUpBtn.classList.remove('greenBtn');
+  signUpBtn.classList.add('btn');
+
+}
+
+const singUp =()=>{
+  wordchng.innerHTML='Password Suggestion';
+  heading.innerHTML="Sign Up";
+  line.style.marginRight ='0';
+  nameDiv.classList.remove('noName');
+
+  signInBtn.classList.remove('greenBtn');
+  signUpBtn.classList.add('greenBtn');
+  
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>

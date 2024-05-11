@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background: rgb(78, 55, 241);
+  background: linear-gradient(
+    59deg,
+    rgba(78, 55, 241, 1) 10%,
+    rgba(197, 189, 255, 1) 100%
+  );
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+}
+.age_container {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+.age_container h1{
+  font-size: 3rem;
+  color: white;
+  font-style: italic;
+}
+.age_container h1 span{
+  color: yellow;
+}
+.age-calculate{
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(197, 189, 255, 0.464);
+  border-radius: 5px;
+  width:370px ;
+  display: flex;
+  
+}
+.age-calculate input{
+  padding: 8px 20px;
+  width: 230px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .90rem;
+  border-radius: 5px;
+  position: relative;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.age-calculate input::-webkit-calendar-picker-indicator{
+position: absolute;
+top: 8px;
+bottom: 0;
+left: 0;
+right: 0;
+width: auto;
+background-position: calc(100% - 10px);
+background-size: 20px;
+cursor: pointer;
+
+}
+.age-calculate button{
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: yellow;
+  font-style: italic;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+#result{
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: white;
+  font-style: italic;
+}
+#result span{
+  font-size: 1.5rem;
+  color: yellow;
+}
+/* media screen for 600px and less */
+@media (max-width:600px) {
+  body{
+padding: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+  }
+  .age_container h1{
+    font-size: 2.5rem;
+    color: white;
+    font-style: italic;
+  }
+}

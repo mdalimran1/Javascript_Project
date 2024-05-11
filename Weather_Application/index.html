@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Application</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- css cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <section id="main">
+
+    <!-- for search -->
+    <div class="search">
+      <form id="form">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input class="input" type="text" placeholder="Search your city..." required>
+      </form>
+    </div>
+
+
+
+
+    <!-- country weather and date -->
+    <div class="country_weather">
+
+      <h1 class="country_name"></h1>
+      <p class="country_date"></p>
+
+      <div class="weather_data">
+        <h2 class="weather_forecast"></h2>
+        <div class="weather_icon"></div>
+      </div>
+
+      <h3 class="weather_tamp"></h3>
+
+      <div class="weather_minmax">
+        <p class="w-min"></p>
+        <p class="w-max"></p>
+      </div>
+    </div>
+
+    <!-- country weather extra data -->
+    <div class="weather_info">
+
+
+      <div class="w-info-part1">
+        <div class="feels">
+          <i class="fa-solid fa-droplet"></i>
+          <div class="tamp">
+            <h3>Feels Like</h3>
+            <p class="feel_temp"></p>
+          </div>
+        </div>
+
+        <div class="humidity">
+          <i class="fa-solid fa-droplet"></i>
+          <div class="tamp">
+            <h3>Humidity</h3>
+            <p class="humidity_temp"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-info-part2">
+        <div class="wind">
+          <i class="fa-solid fa-wind"></i>
+          <div class="tamp">
+            <h3>Wind Speed</h3>
+            <p class="wind_temp"></p>
+          </div>
+        </div>
+
+        <div class="pressure">
+          <i class="fa-solid fa-circle-radiation"></i>
+          <div class="tamp">
+            <h3>Pressure</h3>
+            <p class="pressure_temp"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+<script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StopWatch</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: rgb(13, 22, 195);
+      background: linear-gradient(259deg, rgb(11, 201, 87) 0%, rgb(231, 156, 16) 100%);
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      width: 60%;
+      background-color: transparent;
+      max-width: 400px;
+      border: 2px solid white;
+      padding: 20px;
+      margin: 100px auto;
+      background: rgb(95, 7, 189);
+      background: linear-gradient(142deg, rgb(23, 225, 94) 0%, rgb(234, 124, 14) 100%);
+    }
+
+    h1 {
+      font-size: 3rem;
+      background: transparent;
+      color: white;
+    }
+
+    button {
+      font-size: 1rem;
+      border: 0;
+      padding: 10px 20px;
+      border-radius: 20px;
+      background: rgb(237, 32, 157);
+      background: linear-gradient(90deg, rgb(220, 7, 7) 0%, rgb(228, 187, 6) 100%);
+      border: 2px solid rgb(251, 251, 251);
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .stylebtns1 {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .stylebtns2 {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: white;
+    }
+
+    /* responsive part */
+    @media(max-width:530px) {
+      body {
+        background: rgb(13, 22, 195);
+        background: linear-gradient(259deg, rgb(11, 201, 87) 0%, rgb(231, 156, 16) 100%);
+        width: 100%;
+        height: 100%;
+      }
+
+      button {
+        font-size: 12px;
+
+      }
+
+    }
+
+    @media(max-width:460px) {
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      button {
+        font-size: 10px;
+        padding: 5px 10px;
+      }
+
+      .container {
+        padding: 20px 0px 0px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="countHeader">0</h1>
+    <div class="btns">
+      <div class="stylebtns1">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="stylebtns2">
+        <button id="getTime">GetTime</button>
+        <button id="clearTime">ClearTime</button>
+      </div>
+    </div>
+    <div id="timeShow">
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    font-size: 10px;
+}
+.slidde-control{
+    text-align: center;
+    
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 217, 0, 0.72);
+    
+}
+.slide_show i,
+.slide_show h1{
+    font-size: 13rem;
+    color: rgba(50, 205, 50, 0.857);
+    margin-top: 30px;
+    
+}
+#volleyball i,#volleyball h1{
+color: rgb(255, 20, 147);
+}
+#swiming i,
+#swiming h1{
+    color:rgb(0, 191, 255);
+    }
+.slide_show h1{
+
+    margin-top: 30px;
+}
+.slide_show{
+    position: absolute;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 1s;
+}
+.slide_show.controll{
+
+    transform: translate(-50%,-50%) scale(1);
+    transition: 1s;
+}
+
+@media (max-width:650px) {
+    .slide_show i,
+    .slide_show h1{
+        font-size: 9rem;
+        color: rgba(50, 205, 50, 0.857);
+        margin-top: 30px;
+        
+    }
+}

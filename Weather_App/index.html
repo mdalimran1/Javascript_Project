@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <!-- css cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- css link -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+ 
+  <section id="container">
+    <!-- search container -->
+    <div class="search">
+      <form>
+        <input id="input" type="text" placeholder="City Name..." required>
+        <button id="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
+    <!-- for error  -->
+    <div class="error">
+          <p>Error! City not found.</p>
+    </div>
+
+    <!-- full weather section -->
+    <section class="fullWeatherSection">
+          <!-- weather info container -->
+    <div class="weather_container">
+      <div class="weather_icon"><img src="" id="weather_icon"></div>
+      <h1 class="city_temp"></h1>
+      <h3 class="city_name"></h3>
+    </div>
+
+    <!-- weather temp container -->
+    <div class="weather_temp">
+      <div class="temperature_con">
+        <i class="fa-solid fa-droplet"></i>
+        <div>
+          <h1 id="temp" class="humidity_temp"></h1>
+          <h4>Humidity</h4>
+        </div>
+      </div>
+
+      <div class="temperature_con">
+        <i class="fa-solid fa-wind"></i>
+        <div>
+          <h1 id="temp" class="wind_temp"></h1>
+          <h4>Wind Speed</h4>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+  </section>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

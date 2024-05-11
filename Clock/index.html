@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital CLock</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #226390;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-size: 3rem;
+        }
+
+        h1 {
+            border: 5px solid #c1af0f;
+            padding: 30px 50px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        @media (max-width:650px) {
+            div {
+         
+            font-size: 2rem;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1></h1>
+    </div>
+
+    <script>
+
+        "use strict"
+
+        //**********************1ST WAY*******************
+
+const h1=document.querySelector('h1');
+
+function RealClock(){
+    const clock = new Date().toLocaleTimeString();
+    h1.innerHTML=clock;
+}
+
+setInterval(()=>{
+RealClock();
+},1000)
+
+
+
+
+
+
+
+
+
+
+
+        //**********************2Nd WAY*********************
+
+        // const h1 = document.querySelector('h1');
+
+        // function clock() {
+        //     let time = new Date();
+        //     let hours = time.getHours();
+        //     let minutes = time.getMinutes();
+        //     let seconds = time.getSeconds();
+
+        //     let clock = `${setfun(hours)}:${setfun(minutes)}:${setfun(seconds)}`
+        //     h1.innerHTML = clock;
+        // }
+
+
+
+        // setInterval(() => {
+        //     clock();
+        // }, 1000)
+
+
+        // function setfun(value) {
+        //     if (value < 10) {
+        //         return "0" + value;
+        //     } else {
+        //         return value;
+        //     }
+        // }
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+</script>
+</body>
+
+</html>

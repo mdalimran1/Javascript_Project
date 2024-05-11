@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  padding:0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+#container{
+  max-width:500px;
+  width: 90%;
+  background-color:	#008080;
+  height:auto;
+  margin:150px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding:20px;
+  color: #fff;
+  border-radius:10px;
+}
+.search{
+  margin: 20px 0px;
+}
+#input{
+  width: 330px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+input::placeholder{
+  font-size:1rem;
+  color: black;
+  font-weight: 500;
+}
+#search_btn{
+  border: none;
+  outline: none;
+  padding:11px 12px;
+  border-radius: 50%;
+  margin-left:5px;
+}
+#search_btn i{
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.weather_container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.weather_container h1{
+  font-size: 3rem;
+}
+.weather_container h3{
+  font-size: 1.7rem;
+}
+.weather_icon img{
+  width: 150px;
+  height:150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  padding: 5px;
+}
+
+.weather_temp{
+  width: 90%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 0 auto;
+  
+  
+}
+.temperature_con{
+  display: flex;
+  gap: 10px;
+}
+.temperature_con i{
+  font-size: 3rem;
+  margin-top:-7px;
+}
+.temperature_con div h1{
+  font-size:2rem;
+}
+
+.fullWeatherSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  display:none;
+  padding-bottom:20px;
+  
+}
+.error{
+  margin-top: -10px;
+  color: rgb(245, 27, 27);
+  font-size: 1.2rem;
+  display: none;
+}

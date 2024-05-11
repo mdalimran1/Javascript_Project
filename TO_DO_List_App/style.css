@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background: linear-gradient(90deg,#9a782d 0%,#10e754  100%);
+  width:100%;
+  height:auto;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:start;
+  height:auto;
+  gap: 20px;
+  justify-content: center;
+  background-color: #fff;
+  width:100%;
+  max-width:500px;
+  padding:30px;
+  margin:150px auto 100px;
+  border-radius:10px;
+
+}
+
+.container .heading h1{
+  font-size: 2rem;
+  font-weight: 900;
+
+  
+}
+.container .heading h1 img{
+  width: 40px;
+  height: 40px;
+}
+.input{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  width:100%;
+  background-color: rgb(207, 212, 225);
+  border-radius:25px;
+  height:50px;
+}
+#input{
+  flex:1;
+  border:0;
+  outline:0;
+  font-size:16px;
+  background-color:rgb(207, 212, 225);
+  padding-left:20px;
+  border-radius:25px;
+  height:50px;
+  
+}
+
+.input button{
+outline:0;
+border:0;
+padding:10px 30px;
+border-radius:25px;
+background-color:rgba(247, 67, 35, 0.813);
+cursor: pointer;
+color: #fff;
+font-size:16px;
+font-weight: 900;
+height:50px;
+}
+::placeholder{
+  font-size: 16px;
+  color:rgba(0, 0, 0, 0.679);
+}
+ul{
+  position: relative;
+  width: 100%;
+}
+ul li{
+  list-style: none;
+  margin-bottom:20px;
+  font-size: 18px;
+  padding:12px 8px 12px 45px;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  align-items: center;
+}
+ul li::before{
+  content:'';
+  position: absolute;
+  background-image:url(images/unchecked.png);
+  width:28px;
+  height:28px;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  left:5px;
+}
+li.checked{
+  text-decoration:line-through;
+  color:#100f0f;
+}
+li.checked::before{
+
+  background-image:url(images/checked.png);
+
+}
+li span{
+position: absolute;
+right: 5px;
+font-size: 30px;
+ padding:5px 12px;
+ border-radius:50%;
+ transition:.3s ease;
+}
+
+li span:hover{
+  background-color:rgba(247, 67, 35, 0.813);
+}
+
+/* media screen for 600px */
+@media (max-width:600px) {
+  body{
+    background: linear-gradient(90deg,#24a066 0%,#c1540c  100%);
+    width:100%;
+    height:auto;
+  }
+  .container{
+    align-items:center;
+    width:100%;
+    max-width:400px;
+    padding:40px;
+  }
+  .container .heading h1{
+    font-size: 1.6rem;
+    font-weight: 900;
+  
+    
+  }
+}

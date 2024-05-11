@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="time">
+            <span class="degitE" id="hr">00</span>
+            <span class="textE">Hr</span>
+
+            <span class="degitE" id="min">00</span>
+            <span class="textE">Min</span>
+
+            <span class="degitE" id="sec">00</span>
+            <span class="textE">Sec</span>
+
+            <span class="degitE" id="count">00</span>
+        </div>
+
+        <div class="btn">
+            <button id="start" onclick="Start()">Start</button>
+            <button id="stop" onclick="Stop()">Stop</button>
+            <button id="reset" onclick="Reset()">Reset</button>
+        </div>
+
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+
+
+        let hr=0, min = 0, sec = 0,count=0,timer=false;
+
+        let stopTime;
+
+        function Start() {
+
+        
+            if(!timer) {
+            timer=true;
+            StopWatch();
+            }
+            
+        
+
+
+        }
+        function Stop() {
+            timer=false;
+
+        }
+
+        function Reset() {
+
+            hr = 0;
+            min = 0;
+            sec = 0;
+            count = 0;
+        document.querySelector('#hr').innerHTML='00';
+        document.querySelector('#min').innerHTML='00';
+        document.querySelector('#sec').innerHTML='00';
+        document.querySelector('#count').innerHTML='00';
+
+        
+            timer=false;
+        }
+
+
+        function StopWatch() {
+            if(timer){
+                count++;
+                if(count===100){
+                    sec++;
+                    count=0;
+                }
+                if(sec===60){
+                    min++;
+                    sec=0;
+                }
+                if(min===60){
+                    hr++;
+                    min=0;
+                    sec=0;
+                }
+                
+
+                let hours=hr, minutes=min, seconds = sec,minlisecs=count;
+
+                if(hr<10){
+                    hours='0'+hr;
+                }
+                if(min<10){
+                    minutes='0'+min;
+                }
+                if(sec<10){
+                    seconds='0'+sec;
+                }
+                if(count<10){
+                    minlisecs='0'+count;
+                }
+
+
+                document.querySelector('#hr').innerHTML=hours;
+                document.querySelector('#min').innerHTML=minutes;
+                document.querySelector('#sec').innerHTML=seconds;
+                document.querySelector('#count').innerHTML=count;
+
+                setTimeout(StopWatch,10);
+            }
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

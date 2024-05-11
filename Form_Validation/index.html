@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <style>
+        body {
+            background-color: rgb(66, 188, 253);
+        }
+
+        #container {
+            height: 300px;
+            width: 300px;
+            margin: 100px auto;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            text-align: center;
+        }
+
+        input {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px auto;
+            width: 90%;
+        }
+
+        #sub {
+            background-color: rgb(66, 188, 253);
+            color: white;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .error {
+            font-size:1rem;
+            margin: 0;
+            text-align: left;
+            color: red;
+        }
+
+        #loginForm {
+            font-size: 1.5rem;
+        }
+
+        #loginForm input {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form id="loginForm">
+            <label for="name" style="font-weight: bold;">Username</label>
+            <input type="text" id="name" name="name" placeholder="Enter your username...">
+
+            <p id="errortext" class="error"></p>
+
+            <label for="pass" style="font-weight: bold;">Password</label>
+            <input type="password" id="pass" name="pass" placeholder="Enter your password...">
+
+            <p id="errorpass" class="error"></p>
+
+            <input type="submit" id="sub" value="Login">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            validateForm();
+        });
+
+        function validateForm() {
+            let username = document.getElementById("name").value.trim();
+            let password = document.getElementById("pass").value.trim();
+            let errorText = document.getElementById("errortext");
+            let errorPass = document.getElementById("errorpass");
+
+            errorText.innerHTML = "";
+            errorPass.innerHTML = "";
+
+            //for check usernaem start with a digit
+            let regularExpression = /^[^0-9]/;
+            let test = regularExpression.test(username);
+
+            if (test) {
+
+                if (username === "") {
+                    errorText.innerHTML = "Username cannot be empty";
+                    return;
+                }
+
+                if (username.length < 3) {
+                    errorText.innerHTML = "Username must be at least 3 characters long";
+                    return;
+                }
+
+            } else {
+                errorText.innerHTML = "Username must start with Carecter";
+
+            }
+
+            if (password === "") {
+                errorPass.innerHTML = "Password cannot be empty";
+                return;
+            }
+
+            if (password.length < 4) {
+                errorPass.innerHTML = "Password must be at least 4 characters long";
+                return;
+            }
+
+            // If all validations pass, submit the form
+            document.getElementById("loginForm").submit();
+        }
+    </script>
+</body>
+
+</html>

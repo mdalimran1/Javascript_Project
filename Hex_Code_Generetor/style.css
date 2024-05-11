@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color:#5F9EA0;
+}
+.color{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  gap: 40px;
+  color: white;
+}
+.color p{
+  font-size:1.5rem;
+  background-color: transparent;
+  margin-top:30px;
+  font-weight: bold;
+}
+#btn{
+  border:5px solid #fff;
+  padding: 20px 40px;
+  background-color: #5F9EA0;
+  box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
+  border-radius: 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color:white;
+  font-weight:bold;
+}
+#copy{
+  box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
+  display: inline-block;
+  padding:20px 50px;
+  font-size:2rem;
+  border-left:5px solid #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
